@@ -1,3 +1,8 @@
+/* Counter */
+:root {
+  counter-reset: h1-sum;
+}
+
 /* Importing Font */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap");
 
@@ -105,4 +110,16 @@ img {
   main .img h2 {
     margin: 1rem auto;
   }
+}
+h2 {
+  list-style-type: none;
+}
+
+h2 {
+  counter-increment: h1-sum 1; /* Increase the counter by 1. */
+}
+
+h2:before {
+  content: counter(h1-sum) ". "; /* Apply counter before children's content. */
+  color: black;
 }
