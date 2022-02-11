@@ -1,0 +1,108 @@
+/* Importing Font */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap");
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+
+body {
+  background: linear-gradient(
+      120deg,
+      rgba(51, 88, 255, 0.952),
+      rgb(95, 226, 95)
+    )
+    center center/cover;
+  height: 100%;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+}
+
+/* Container */
+.container {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+}
+nav h1:hover {
+  cursor: pointer;
+}
+/* Links */
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+}
+nav ul li a {
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  color: #fff;
+}
+nav ul li a:hover {
+  border-bottom: #fff 2px solid;
+}
+.current-page {
+  background-color: black;
+}
+
+/* ShowCase */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .img {
+  width: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+main .img h2 {
+  margin: 2rem;
+}
+main .img h2 a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.822);
+}
+main .img h2 a:hover {
+  border-bottom: rgba(0, 0, 0, 0.822) solid 2px;
+}
+
+/* img */
+img {
+  width: 400px;
+}
+
+@media screen and (max-width: 680px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  nav ul {
+    margin: 1rem auto 0 auto;
+  }
+  img {
+    width: 300px;
+  }
+  main .img {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem;
+  }
+  main .img h2 {
+    margin: 1rem auto;
+  }
+}
