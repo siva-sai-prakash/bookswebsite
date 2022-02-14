@@ -4,13 +4,24 @@ let search = document.getElementById('search-bar');
 // Book Classes
 let books = document.querySelectorAll('.img');
 
-function searchForItems(){
-    let searchValue = search.value;
-    if (searchValue === books[0].querySelector('a').innerHTML){
-    console.log(books[0].querySelector('a').innerHTML);
-    }
+// Adding Search Class
+let button = document.querySelector('i');
 
+button.addEventListener('click', searchNow)
+search.addEventListener(
+    'keyup',
+    searchNow
+)
+
+
+function searchNow() {
+    let value = search.value.toLowerCase();
+    books.forEach((book) => {
+        if (book.querySelector('a').textContent.trim().toLowerCase().indexOf(value) != -1) {
+            book.style.display = '';
+        }
+        else {
+            book.style.display = 'none';
+        }
+    })
 }
-
-search.addEventListener('keyup' , searchForItems)
-
